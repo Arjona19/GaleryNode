@@ -12,7 +12,6 @@ router.get('/', function (req, res, next) {
 router.get('/galeria', function (req, res, next) {
   db.query("SELECT * FROM imagen", function (err, resultados) {
     res.render('galeria', { title: 'Galería', Imagenes: resultados });
-    console.log(resultados);
   });
 });
 
