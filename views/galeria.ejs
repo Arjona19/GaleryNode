@@ -1,0 +1,22 @@
+<%- include layouts/header.ejs %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= title %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <% for(var i = 0; i < Imagenes.length; i++){ %>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="/images/<%= Imagenes[i].url_imagen %>" class="card-img-top" alt="Imagen">
+        <div class="card-body">
+          <p class="card-text"><%= Imagenes[i].nombre_imagen %></p>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <br>
+  </div>
+</div>
+<%- include layouts/footer.ejs %>
